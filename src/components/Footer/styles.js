@@ -1,9 +1,11 @@
-footer{
+import styled from "styled-components";
+
+export const Foot = styled.footer`
     width: 100%;
     height: 200px;
-}
+`;
 
-.footer-up{
+export const Up = styled.div`
     box-sizing: border-box;
     width: 100%;
     height: 170px;
@@ -11,66 +13,67 @@ footer{
     justify-content: space-between;
     background-color: var(--corSecundaria);
     padding: 60px;
-}
+`;
 
-.footer-up .footer-left{
+export const Left = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
-}
+    width: 60%; 
+`;
 
-.footer-up .footer-left .footer-icon{
+export const Icon = styled.div`
     width: 200px;
     height: 80px;
     display: flex;
     justify-content: space-between;
-}
 
-.footer-up .footer-left .footer-icon img{
-    width: 120px;
-}
+    img{
+        width: 120px;
+    }
+`;
 
-.footer-up .footer-left .footer-text{
+export const Text = styled.div`
     width: 80%;
     text-align: justify;
     margin-top: 30px;
     color: #FFF;
-}
+`;
 
-.footer-up .footer-right{
+export const Right = styled.div`
     display: flex;
     align-items: center;
     width: 40%;
-}
+`;
 
-.footer-up .footer-right .footer-about{
+export const About = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items:flex-end;
-}
 
-.footer-up .footer-right .footer-about .footer-about-options{
+    h3{
+        color: #FFF ;
+    }
+`;
+
+export const Options = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
 
-.footer-up .footer-right .footer-about h3{
-    color: #FFF;
-}
-.footer-up .footer-right .footer-about .footer-about-options a{
-    color: #FFF;
-    margin-top: 5px;
-    font-weight: 600;
-    transition: ease-in-out .1s;
-}
-.footer-up .footer-right .footer-about .footer-about-options a:hover{
-    color: var(--clickColor);
-}
+    a{
+        color: #FFF;
+        margin-top: 5px;
+        font-weight: 600;
+        transition: ease-in-out .1s;
+    }
+    a:hover{
+        color: var(--clickColor);
+    }
+`;
 
-.footer-back{
+export const Back = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -78,11 +81,11 @@ footer{
     flex-direction: column;
     background-color: var(--corPrimaria);
     color: #FFF;
-}
 
-.footer-back p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 600;
-}
+    p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+    }
+`;

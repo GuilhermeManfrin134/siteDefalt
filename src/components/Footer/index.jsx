@@ -1,27 +1,27 @@
 import { Link } from 'react-router-dom';
 import icon from '../../assets/ICONE DO SITE 2.png';
 
-//Estilização
-import './footer.css';
+//Componentes de Estilização
+import { About, Back, Foot, Icon, Left, Options, Right, Text, Up } from './styles';
 
 export default function Footer(){
     return(
-        <footer>
-            <div className='footer-up'>
-                <div className='footer-left'>
-                    <div className='footer-icon'>
+        <Foot>
+            <Up>
+                <Left>
+                    <Icon>
                         <Link to='/'>
                             <img src={icon} alt='ICONE'/>
                         </Link>
-                    </div>
-                    <p className='footer-text'>
+                    </Icon>
+                    <Text>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, officia deserunt harum, recusandae quam quod praesentium, beatae doloremque perspiciatis dolor sunt? Id illum, consectetur cumque cupiditate molestias dignissimos ducimus omnis.
-                    </p>
-                </div>
-                <div className='footer-right'>
-                    <div className='footer-about'>
+                    </Text>
+                </Left>
+                <Right>
+                    <About>
                         <h3>Sobre</h3>
-                        <div className='footer-about-options'>
+                        <Options>
                             <Link to='/'>
                                 Nós
                             </Link>
@@ -31,16 +31,16 @@ export default function Footer(){
                             <Link to='/'>
                                 Contato
                             </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='footer-back'>
+                        </Options>
+                    </About>
+                </Right>
+            </Up>
+            <Back>
                 <p>
                     Designed By Guilherme Manfrin Pereira
                     <p>Copyright ©2022</p>
                 </p>
-            </div>
-        </footer>
+            </Back>
+        </Foot>
     )
 }
