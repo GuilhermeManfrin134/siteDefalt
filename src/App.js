@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
 //ROTAS
-import Routex from './routes/Routex';
+import Routes from './routes';
 
 //ESTILIZAÇÃO
 import './App.css';
@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Nav />
-      <Routex />
+      <Routes />
       <Footer />
     </BrowserRouter>
   );
