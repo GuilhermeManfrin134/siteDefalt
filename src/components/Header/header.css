@@ -11,18 +11,23 @@ header{
 }
 
 .header-nav{
-    width: 90%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header-nav .social-media, 
-.header-nav .icon{
+.header-nav .social-media{
     width: 200px;
     height: 80px;
     display: flex;
     justify-content: space-around;
+}
+.header-nav .icon{
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: left;
 }
 
 .header-nav .social-media a{
