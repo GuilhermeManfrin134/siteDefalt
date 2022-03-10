@@ -1,3 +1,9 @@
+:root{
+  --corPrimaria: #03045e;
+  --corSecundaria: #4246e5;
+  --clickColor: #a6595d;
+}
+
 body {
   margin: 0;
   padding: 0;
