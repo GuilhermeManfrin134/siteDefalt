@@ -1,18 +1,20 @@
 .body-page{
     display: grid;
-    grid-template-columns: 50% 30%;
+    grid-template-columns: 70% 20%;
     grid-template-rows: 300px 300px;
-    grid-template-areas: "banner podcast" "main podcast";
+    grid-template-areas: "banner destaques" "main destaques";
     justify-content: space-around;
+    align-items: center;
+    justify-items: center;
 }
 
-.banner{
+.body-banner{
     grid-area: banner;
     
 }
-.main{
+.body-main{
     grid-area: main;
 }
-.podcast{
-    grid-area: podcast;
+.body-destaques{
+    grid-area: destaques;
 }
