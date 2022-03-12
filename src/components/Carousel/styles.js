@@ -18,6 +18,10 @@ export const SectionBanner = styled.section`
     overflow-x: auto;
     overflow-y: auto;
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
 `;
 
 export const CarouselBanner = styled.div`
