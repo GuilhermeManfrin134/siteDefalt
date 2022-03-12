@@ -13,7 +13,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 export default function Carousel(){
 
     const [data, setData] = useState([]);
-    const carousel = useRef(null)
+    const [seconds, setSeconds] = useState(0);
+    const carousel = useRef(null);
 
     useEffect(() => {
         fetch('http://localhost:3000/apiTeste.json')
@@ -32,6 +33,25 @@ export default function Carousel(){
         
         carousel.current.scrollLeft += carousel.current.offsetWidth;
     }
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+            setSeconds(seconds => seconds + 1);
+        }, 10000)
+        return () => clearInterval(interval);
+
+    }, []);
+
+    useEffect(()=>{
+        
+        carousel.current.scrollLeft += carousel.current.offsetWidth;
+        if(seconds === data.length){
+            carousel.current.scrollLeft = 0;
+            setSeconds(seconds => seconds = 0);
+        }
+
+    }, [seconds, data])
 
     if(!data && !data.length) return null;
     
