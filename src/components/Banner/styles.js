@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const SectionBanner = styled.section`
     width: 100%;
+    border-radius: 10px;
+
     display: flex;
-    justify-content: center;
-    border-radius: 10px 10px 0 0;
+    flex-wrap: nowrap;
     
     overflow-x: auto;
     overflow-y: auto;
