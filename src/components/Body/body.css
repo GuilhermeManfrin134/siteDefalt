@@ -1,16 +1,22 @@
 .body-page{
     display: grid;
     grid-template-columns: 70% 20%;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: auto auto;
     grid-template-areas: "banner destaques" "main destaques";
     justify-content: space-around;
     align-items: center;
     justify-items: center;
+    margin-top: 30px;
 }
 
 .body-banner{
     grid-area: banner;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    min-width: 300px;
 }
 .body-main{
     grid-area: main;
