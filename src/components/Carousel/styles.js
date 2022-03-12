@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+
+
+export const CarouselSection = styled.section`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+`; 
+
 export const SectionBanner = styled.section`
     width: 100%;
     border-radius: 10px;
@@ -53,7 +61,7 @@ export const ImageBanner = styled.div`
     }
 `;
 
-export const TituloBanner = styled.div`
+export const TitleBanner = styled.div`
     box-sizing: border-box;
     background: rgba(66, 70, 229, 0.9);
     color:#FFF;
@@ -77,72 +85,52 @@ export const TituloBanner = styled.div`
     }
 `;
 
-export const SettingButtons = styled.div`
+export const Chevron = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    width: 60px;
     height: auto;
 `;
 
-export const ButtonRight = styled.button`
+export const ButtonChevron = styled.button`
     background-color: transparent;
-
-    img{
-        width: 100%;
-        height: auto;
-
-            
-        -moz-transition: ease-in-out 0.1s;
-        -webkit-transition: ease-in-out 0.1s;
-        transition: ease-in-out 0.1s;
-
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-
-        width: 100%;
-        height: auto;
-
-        :hover{
-            cursor: pointer;
-            -moz-transform: scale(1.3);
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);     
-        }
-    }
-`;
-export const ButtonLeft = styled.button`
-    background-color: transparent;
-        transform: rotate(180deg);
-
-    img{
-        width: 100%;
-        height: auto;
-                
-        -moz-transition: ease-in-out 0.1s;
-        -webkit-transition: ease-in-out 0.1s;
-        transition: ease-in-out 0.1s;
-
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        
-        width: 100%;
-        height: auto;
-
-        :hover{
-            cursor: pointer;
-            -moz-transform: scale(1.3);
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);    
-        }
-    }
-`;
-
-export const CarouselSection = styled.section`
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-`; 
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 45px;
+    background-color: var(--corSecundaria);
+                    
+    -moz-transition: ease-in-out 0.1s;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    :hover{
+        cursor: pointer;
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);  
+    }
+
+    :active{
+        background-color: var(--corPrimaria );
+        color: #FFF;
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);  
+    }
+
+    svg{
+        width: 100%;
+        height: auto;
+    }
+`;
 

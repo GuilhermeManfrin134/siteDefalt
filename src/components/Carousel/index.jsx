@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 
-//Importando Setas
-import button from '../../assets/chevron_icon.png';
-
 //Componentes de Estilização
-import { SectionBanner, ContentBanner, ImageBanner, TituloBanner, CarouselSection, CarouselBanner, SettingButtons, ButtonRight, ButtonLeft } from './styles.js';
+import { 
+    SectionBanner, ContentBanner, ImageBanner, 
+    TitleBanner, CarouselSection, CarouselBanner, 
+    Chevron, ButtonChevron
+} from './styles.js';
+
+//Importando ICONES
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function Carousel(){
 
@@ -20,32 +24,31 @@ export default function Carousel(){
     
     return(
         <CarouselSection>
-            <SettingButtons>
-                <ButtonLeft>
-                    <img src={button} alt="left" />
-                </ButtonLeft>
-            </SettingButtons>
+            <Chevron>
+                <ButtonChevron>
+                    <FaChevronLeft />
+                </ButtonChevron>
+            </Chevron>
             <SectionBanner>
                 {data.map((item) => {
                     return(
                         <CarouselBanner>
                             <ContentBanner key={item.id}>
                                 <ImageBanner foto={item.foto}>
-                                    <TituloBanner>
+                                    <TitleBanner>
                                         <p>{item.titulo}</p>
-                                    </TituloBanner>
+                                    </TitleBanner>
                                 </ImageBanner>
                             </ContentBanner>
                         </CarouselBanner>
                     )
                 })}
             </SectionBanner>
-            <SettingButtons>
-                <ButtonRight>
-                    <img src={button} alt="ButtonRight" />
-                </ButtonRight>
-            </SettingButtons>
+            <Chevron>
+                <ButtonChevron>
+                    <FaChevronRight />
+                </ButtonChevron>
+            </Chevron>
         </CarouselSection>
-
     )
 }
