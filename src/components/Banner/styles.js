@@ -5,11 +5,17 @@ export const SectionBanner = styled.section`
     display: flex;
     justify-content: center;
     border-radius: 10px 10px 0 0;
+    
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 `;
 
 export const ContentBanner = styled.div`
     width: 100%;
     overflow: hidden;
+
+    flex: none;
 `;
 
 export const ImageBanner = styled.div`
@@ -20,7 +26,8 @@ export const ImageBanner = styled.div`
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
-    background: url(${props => `${props.foto}`}) no-repeat center;
+    background: url(${props => `${props.foto}`}) no-repeat;
+    background-size: cover;
 
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;

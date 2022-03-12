@@ -1,0 +1,17 @@
+[
+    { 
+        "id": 1, 
+        "titulo": "Netflix vai exibir Sailor Moon Crystal", 
+        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/wallpapersden.com_sailor-moon-pretty-guardian-sailor-moon-franchisees_1920x1200-420x236.jpg"
+    },
+    { 
+        "id": 2, 
+        "titulo": "Sailor Moon S e três filmes", 
+        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/darth-vader-420x236.jpg"
+    },
+    { 
+        "id": 3, 
+        "titulo": "três filmes das guerreiras lunares no Brasil", 
+        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/martha-is-dead-420x236.jpg"
+    }
+]
