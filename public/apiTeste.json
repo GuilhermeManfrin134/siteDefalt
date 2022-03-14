@@ -1,17 +1,62 @@
 [
     { 
         "id": 1, 
-        "titulo": "Netflix vai exibir Sailor Moon Crystal", 
-        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/wallpapersden.com_sailor-moon-pretty-guardian-sailor-moon-franchisees_1920x1200-420x236.jpg"
+        "titulo": "Naruto é mesmo o anime mais conhecido do Brasil?", 
+        "foto": "https://i.ibb.co/JzqxqTM/Naruto.jpg",
+        "categoria": "Anime"
     },
     { 
         "id": 2, 
-        "titulo": "Sailor Moon S e três filmes", 
-        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/darth-vader-420x236.jpg"
+        "titulo": "Formação inicial dos Vingadores no Cinema irá passar o bastão para a nova", 
+        "foto": "https://i.ibb.co/tYLRvZV/Vingadores.jpg",
+        "categoria": "Filme"
     },
     { 
         "id": 3, 
-        "titulo": "três filmes das guerreiras lunares no Brasil", 
-        "foto": "https://www.geekhere.com.br/wp-content/uploads/2022/03/martha-is-dead-420x236.jpg"
+        "titulo": "Mangá de Komi-san é lançado no Brasil pela Panini", 
+        "foto": "https://i.ibb.co/ygkq95T/komi-san.jpg",
+        "categoria": "Mangá"
+    },
+    { 
+        "id": 4, 
+        "titulo": "WandaVision é premiada no Critics Choice Awards", 
+        "foto": "https://i.ibb.co/2jtHZWB/Wanda-Vision.jpg",
+        "categoria": "Série"
+    },
+    { 
+        "id": 5, 
+        "titulo": "A importância do Superman na história das HQs", 
+        "foto": "https://i.ibb.co/rdVNtLf/Superman.jpg",
+        "categoria": "HQ"
+    },
+    { 
+        "id": 6, 
+        "titulo": "Veja o filme de Anime mais popular do Brasil", 
+        "foto": "https://i.ibb.co/PTVQ2fB/Kimi-no-Na-wa.jpg",
+        "categoria": "Anime"
+    },
+    { 
+        "id": 7, 
+        "titulo": "Star Wars! Veja tudo que deu errado na Trilogia nova", 
+        "foto": "https://i.ibb.co/Sr8ScNT/Star-Wars.png",
+        "categoria": "Filme"
+    },
+    { 
+        "id": 8, 
+        "titulo": "Revelado novo poder de Zoro no Mangá de One Piece!", 
+        "foto": "https://i.ibb.co/g3rqxKt/Zoro.jpg",
+        "categoria": "Mangá"
+    },
+    { 
+        "id": 9, 
+        "titulo": "STRANGER THINGS VEM AÍ!!! Relembre as 3 primeiras temporadas", 
+        "foto": "https://i.ibb.co/grDw3rw/Stranger-Things.jpg",
+        "categoria": "Série"
+    },
+    { 
+        "id": 10, 
+        "titulo": "Veja as melhores sagas do Cabeça de Teia nos Quadrinhos", 
+        "foto": "https://i.ibb.co/dQXTm45/Homem-Aranha.jpg",
+        "categoria": "HQ"
     }
 ]
