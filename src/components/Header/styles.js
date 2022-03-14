@@ -1,40 +1,32 @@
 import styled from 'styled-components';
 
 export const Head = styled.header`
-
     width: 100%;
     height: 80px;
     background: var(--corPrimaria);
     display: flex;
     justify-content: center;
-
 `;
 
 export const HeadNav = styled.div`
-
-    width: 95%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    img{
-        width: 75px;
-    }
-
-
 `;
 
 export const Icon = styled.div`
-
-    width: 200px;
-    height: 80px;
+    width: 130px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
 
+    img{
+        width: 100%;
+    }
 `;
 
 export const SocialMedias = styled.div`
-
     width: 200px;
     height: 80px;
     display: flex;
@@ -60,5 +52,4 @@ export const SocialMedias = styled.div`
             font-size: 28px;
         }
     }
-
 `;

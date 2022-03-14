@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 //Importando Icon
-import icon from '../../assets/ICONE DO SITE 2.png';
+import icon from '../../assets/IconSite.png';
 
 //Importando ICONES
 import { SiAnilist, SiInstagram } from 'react-icons/si';
