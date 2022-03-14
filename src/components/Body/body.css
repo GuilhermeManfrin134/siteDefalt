@@ -20,6 +20,7 @@
 }
 .body-main{
     grid-area: main;
+    width: 100%;
 }
 .body-destaques{
     grid-area: destaques;
