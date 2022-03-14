@@ -2,61 +2,61 @@
     { 
         "id": 1, 
         "titulo": "Naruto é mesmo o anime mais conhecido do Brasil?", 
-        "foto": "https://i.ibb.co/JzqxqTM/Naruto.jpg",
+        "foto": "https://i.ibb.co/hV2CZnh/Naruto.jpg",
         "categoria": "Anime"
     },
     { 
         "id": 2, 
         "titulo": "Formação inicial dos Vingadores no Cinema irá passar o bastão para a nova", 
-        "foto": "https://i.ibb.co/tYLRvZV/Vingadores.jpg",
+        "foto": "https://i.ibb.co/fnZTwRV/Vingadores.jpg",
         "categoria": "Filme"
     },
     { 
         "id": 3, 
         "titulo": "Mangá de Komi-san é lançado no Brasil pela Panini", 
-        "foto": "https://i.ibb.co/ygkq95T/komi-san.jpg",
+        "foto": "https://i.ibb.co/khHS3Zx/komi-san.jpg",
         "categoria": "Mangá"
     },
     { 
         "id": 4, 
         "titulo": "WandaVision é premiada no Critics Choice Awards", 
-        "foto": "https://i.ibb.co/2jtHZWB/Wanda-Vision.jpg",
+        "foto": "https://i.ibb.co/dtb6CQM/Wanda-Vision.jpg",
         "categoria": "Série"
     },
     { 
         "id": 5, 
         "titulo": "A importância do Superman na história das HQs", 
-        "foto": "https://i.ibb.co/rdVNtLf/Superman.jpg",
+        "foto": "https://i.ibb.co/rx1ffN2/Superman.jpg",
         "categoria": "HQ"
     },
     { 
         "id": 6, 
         "titulo": "Veja o filme de Anime mais popular do Brasil", 
-        "foto": "https://i.ibb.co/PTVQ2fB/Kimi-no-Na-wa.jpg",
+        "foto": "https://i.ibb.co/br8jcgY/Kimi-no-Na-wa.png",
         "categoria": "Anime"
     },
     { 
         "id": 7, 
         "titulo": "Star Wars! Veja tudo que deu errado na Trilogia nova", 
-        "foto": "https://i.ibb.co/Sr8ScNT/Star-Wars.png",
+        "foto": "https://i.ibb.co/grbzw7d/Star-Wars.png",
         "categoria": "Filme"
     },
     { 
         "id": 8, 
         "titulo": "Revelado novo poder de Zoro no Mangá de One Piece!", 
-        "foto": "https://i.ibb.co/g3rqxKt/Zoro.jpg",
+        "foto": "https://i.ibb.co/61BddLf/Zoro.jpg",
         "categoria": "Mangá"
     },
     { 
         "id": 9, 
         "titulo": "STRANGER THINGS VEM AÍ!!! Relembre as 3 primeiras temporadas", 
-        "foto": "https://i.ibb.co/grDw3rw/Stranger-Things.jpg",
+        "foto": "https://i.ibb.co/gdBZ5zs/Stranger-Things.png",
         "categoria": "Série"
     },
     { 
         "id": 10, 
         "titulo": "Veja as melhores sagas do Cabeça de Teia nos Quadrinhos", 
-        "foto": "https://i.ibb.co/dQXTm45/Homem-Aranha.jpg",
+        "foto": "https://i.ibb.co/9g1TtdB/Homem-Aranha.jpg",
         "categoria": "HQ"
     }
 ]

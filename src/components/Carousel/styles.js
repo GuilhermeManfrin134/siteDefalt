@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const CarouselSection = styled.section`
     display: flex;
     justify-content: space-between;
@@ -34,7 +32,6 @@ export const CarouselBanner = styled.div`
 export const ContentBanner = styled.div`
     width: 100%;
     overflow: hidden;
-
 `;
 
 export const ImageBanner = styled.div`
