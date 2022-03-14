@@ -1,7 +1,9 @@
 :root{
-  --corPrimaria: #03045e;
-  --corSecundaria: #4246e5;
-  --clickColor: crimson;
+  --primaryColor: #00b4d8;
+  --secondaryColor: #3a0ca3;
+  --tertiaryColor: #03045e;
+  --quaternaryColor: #ffd60a;
+  --clickColor: #ffc300;
 }
 
 body {

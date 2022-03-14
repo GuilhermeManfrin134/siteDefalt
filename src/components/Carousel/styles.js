@@ -32,6 +32,7 @@ export const CarouselBanner = styled.div`
 export const ContentBanner = styled.div`
     width: 100%;
     overflow: hidden;
+
 `;
 
 export const ImageBanner = styled.div`
@@ -64,7 +65,7 @@ export const ImageBanner = styled.div`
 
 export const TitleBanner = styled.div`
     box-sizing: border-box;
-    background: rgba(66, 70, 229, 0.9);
+    background: rgb(255, 214, 10, 0.9);
     color:#FFF;
     font-weight: 700;
     text-align: justify;
@@ -104,7 +105,7 @@ export const ButtonChevron = styled.button`
     width: 40px;
     height: 40px;
     border-radius: 45px;
-    background-color: var(--corSecundaria);
+    background-color: var(--quaternaryColor);
                     
     -moz-transition: ease-in-out 0.1s;
     -webkit-transition: ease-in-out 0.1s;
@@ -122,7 +123,7 @@ export const ButtonChevron = styled.button`
     }
 
     :active{
-        background-color: var(--corPrimaria );
+        background-color: var(--secondaryColor);
         color: #FFF;
         -moz-transform: scale(1);
         -webkit-transform: scale(1);

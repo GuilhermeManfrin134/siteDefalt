@@ -6,7 +6,7 @@ export const Navigator = styled.nav`
     align-items: center;
     width: 100%;
     height: 50px;
-    background-color: var(--corSecundaria);
+    background-color: var(--secondaryColor);
 `;
 
 export const NavPrincipal = styled.section`

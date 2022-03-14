@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Foot = styled.footer`
     width: 100%;
     height: 200px;
-    background-color: var(--corSecundaria);
+    background-color: var(--tertiaryColor);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@ export const Back = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--corPrimaria);
+    background-color: var(--primaryColor);
     color: #FFF;
 
     p{

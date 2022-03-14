@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Head = styled.header`
     width: 100%;
     height: 80px;
-    background: var(--corPrimaria);
+    background: var(--primaryColor);
     display: flex;
     justify-content: center;
 `;
