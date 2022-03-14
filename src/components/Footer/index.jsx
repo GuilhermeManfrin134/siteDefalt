@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import icon from '../../assets/ICONE DO SITE 2.png';
+import icon from '../../assets/IconSite.png';
 
 //Componentes de Estilização
-import { About, Back, Foot, Icon, Left, Options, Right, Text, Up } from './styles';
+import { About, Back, Foot, Icon, Left, Options, Right, Text, Up, FootBackText } from './styles';
 
 export default function Footer(){
     return(
@@ -36,10 +36,10 @@ export default function Footer(){
                 </Right>
             </Up>
             <Back>
-                <p>
+                <FootBackText>
                     Designed By Guilherme Manfrin Pereira
-                    <p>Copyright ©2022</p>
-                </p>
+                    <FootBackText>Copyright ©2022</FootBackText>
+                </FootBackText>
             </Back>
         </Foot>
     )

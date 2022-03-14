@@ -3,15 +3,18 @@ import styled from "styled-components";
 export const Foot = styled.footer`
     width: 100%;
     height: 200px;
+    background-color: var(--corSecundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Up = styled.div`
     box-sizing: border-box;
-    width: 100%;
+    width: 95%;
     height: 170px;
     display: flex;
-    justify-content: space-between;
-    background-color: var(--corSecundaria);
+    justify-content: space-around;
     padding: 60px;
 `;
 
@@ -23,34 +26,33 @@ export const Left = styled.div`
 `;
 
 export const Icon = styled.div`
-    width: 200px;
-    height: 80px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     img{
-        width: 120px;
+        width: 100%;
     }
 `;
 
 export const Text = styled.div`
-    width: 80%;
+    width: 70%;
     text-align: justify;
-    margin-top: 30px;
     color: #FFF;
 `;
 
 export const Right = styled.div`
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 20%;
 `;
 
 export const About = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
+    align-items: flex-end;
 
     h3{
         color: #FFF ;
@@ -88,4 +90,13 @@ export const Back = styled.div`
         align-items: center;
         font-weight: 600;
     }
+`;
+
+export const FootBackText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
