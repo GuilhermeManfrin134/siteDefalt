@@ -1,7 +1,10 @@
+//Componentes de Estilização
+import { DestaqueAside } from './style';
+
 export default function Destaques(){
     return(
-        <aside>
+        <DestaqueAside>
             DESTAQUES
-        </aside>
+        </DestaqueAside>
     )
 }

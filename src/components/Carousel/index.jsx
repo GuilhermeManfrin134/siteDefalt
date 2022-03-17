@@ -38,7 +38,7 @@ export default function Carousel(){
 
         const interval = setInterval(() => {
             setSeconds(seconds => seconds + 1);
-        }, 10000)
+        }, 1000)
         return () => clearInterval(interval);
 
     }, []);
@@ -54,7 +54,7 @@ export default function Carousel(){
     }, [seconds, data])
 
     if(!data && !data.length) return null;
-    
+
     return(
         <CarouselSection>
             <Chevron>
