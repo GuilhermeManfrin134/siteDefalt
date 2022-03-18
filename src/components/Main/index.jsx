@@ -29,6 +29,7 @@ export default function Main(){
                             <TitlePub>
                                 {item.titulo}
                             </TitlePub>
+                            
                         </BodyArticles>
                     )
                 })}

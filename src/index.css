@@ -40,3 +40,9 @@ button{
 input{
   border-style: none;
 }
+
+input[type="range"]{
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
