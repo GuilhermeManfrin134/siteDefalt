@@ -17,7 +17,7 @@ import img from '../../assets/FundoTeste.png';
 export default function MiniPodcast(){
 
     const [isPaused, setIsPaused] = useState(true);
-    const [isMuted, setIsMuted] = useState(false);
+    const [isNotMuted, setIsNotMuted] = useState(true);
 
     function handleIsPaused(){
         setIsPaused(!isPaused);
@@ -41,7 +41,17 @@ export default function MiniPodcast(){
     }
 
     function handleMuted(){
-        setIsMuted(!isMuted)
+        setIsNotMuted(!isNotMuted)
+
+        if(isNotMuted){
+                const audio = document.getElementById('mini_podcast_audio');
+                audio.muted = true;
+        }
+        if(isNotMuted === false){
+                const audio = document.getElementById('mini_podcast_audio');
+                audio.muted = false;
+        }
+
     }
 
     return(
@@ -61,14 +71,14 @@ export default function MiniPodcast(){
                             <input type="range" min="0" max="100" id="volume" step="1"/>
                         </MiniVolume>
                         <MiniPodcastVolume onClick={handleMuted}>
-                            {isMuted ? <FaVolumeMute /> : <FaVolumeUp/>}
+                            {isNotMuted ? <FaVolumeUp/> : <FaVolumeMute />}
                         </MiniPodcastVolume>
                     </MiniPodcastAudio>
                 </MiniPodcastFunctions>
                 <MiniPodcastTime>
                     <MiniTime>00:00</MiniTime>
                         <MiniTimer>
-                            <input type="range" min="0" max="0" id="seekbar" step="1"/>
+                            <input type="range" min="0" max="100" id="seekbar" step="1"/>
                         </MiniTimer>
                     <MiniTime>00:00</MiniTime>
                 </MiniPodcastTime>
