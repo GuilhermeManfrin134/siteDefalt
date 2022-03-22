@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //Componentes de Estilização
 import { 
@@ -18,6 +18,18 @@ export default function MiniPodcast(){
 
     const [isPaused, setIsPaused] = useState(true);
     const [isNotMuted, setIsNotMuted] = useState(true);
+    const [volume, setVolume] = useState(50);
+
+    useEffect(() => {
+
+        const audio = document.getElementById('mini_podcast_audio');
+        audio.volume = volume / 100
+
+        const value = document.getElementById('volume');
+        value.oninput = () => setVolume(value.value)
+        value.onchange = () => setVolume(value.value)
+
+    }, [volume]);
 
     function handleIsPaused(){
         setIsPaused(!isPaused);
