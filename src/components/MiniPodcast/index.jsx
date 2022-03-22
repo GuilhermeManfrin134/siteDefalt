@@ -16,11 +16,28 @@ import img from '../../assets/FundoTeste.png';
 
 export default function MiniPodcast(){
 
-    const [isPaused, setIsPaused] = useState(false);
+    const [isPaused, setIsPaused] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
 
     function handleIsPaused(){
         setIsPaused(!isPaused);
+
+        if(isPaused){
+            function playAudio(){
+                const audio = document.getElementById('mini_podcast_audio');
+                audio.play();
+            }
+
+            playAudio();
+        }
+        if(isPaused === false){
+            function pauseAudio(){
+                const audio = document.getElementById('mini_podcast_audio');
+                audio.pause();
+            }
+
+            pauseAudio();
+        }
     }
 
     function handleMuted(){
@@ -35,8 +52,9 @@ export default function MiniPodcast(){
             <MiniPodcastImage>
                 <img src={img} alt="Imagem de Fundo"/>
                 <MiniPodcastFunctions>
-                    <MiniPodcastPlayer onClick={handleIsPaused}>
-                        {isPaused ? <FaPauseCircle/> : <FaPlayCircle/>}
+                    <MiniPodcastPlayer onClick={handleIsPaused} id="mini_podcast_play">
+                        {isPaused ? <FaPlayCircle/> : <FaPauseCircle/>}
+                        <audio src={audio} id="mini_podcast_audio">teste</audio>
                     </MiniPodcastPlayer>
                     <MiniPodcastAudio>
                         <MiniVolume>

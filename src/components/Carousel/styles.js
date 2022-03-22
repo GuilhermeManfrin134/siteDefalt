@@ -85,6 +85,10 @@ export const TitleBanner = styled.div`
         -webkit-line-clamp: 5; /* number of lines to show */
         line-clamp: 5; 
         -webkit-box-orient: vertical;
+
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
     }
 `;
 
