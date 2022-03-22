@@ -43,15 +43,8 @@ export default function MiniPodcast(){
     function handleMuted(){
         setIsNotMuted(!isNotMuted)
 
-        if(isNotMuted){
-                const audio = document.getElementById('mini_podcast_audio');
-                audio.muted = true;
-        }
-        if(isNotMuted === false){
-                const audio = document.getElementById('mini_podcast_audio');
-                audio.muted = false;
-        }
-
+        const audio = document.getElementById('mini_podcast_audio');
+        audio.muted = !audio.muted;
     }
 
     return(
