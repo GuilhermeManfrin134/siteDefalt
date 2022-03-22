@@ -29,7 +29,16 @@ export default function MiniPodcast(){
         value.oninput = () => setVolume(value.value)
         value.onchange = () => setVolume(value.value)
 
+        if(audio.volume > 0){
+            setIsNotMuted(true);
+            audio.muted = false;
+        }
+        if(audio.volume === 0){
+            setIsNotMuted(false);
+        }
     }, [volume]);
+
+    console.log(isNotMuted)
 
     function handleIsPaused(){
         setIsPaused(!isPaused);
@@ -38,6 +47,7 @@ export default function MiniPodcast(){
             function playAudio(){
                 const audio = document.getElementById('mini_podcast_audio');
                 audio.play();
+                audio.currentTime = 60
             }
 
             playAudio();
@@ -53,10 +63,20 @@ export default function MiniPodcast(){
     }
 
     function handleMuted(){
+        
         setIsNotMuted(!isNotMuted)
 
         const audio = document.getElementById('mini_podcast_audio');
         audio.muted = !audio.muted;
+        
+        const value = document.getElementById('volume');
+
+        if(!isNotMuted){
+            value.value = volume;
+        }
+        if(isNotMuted){
+            value.value = 0;
+        }
     }
 
     return(
