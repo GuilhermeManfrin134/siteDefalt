@@ -20,29 +20,10 @@ export default function MiniPodcast(){
     const [isNotMuted, setIsNotMuted] = useState(true);
     const [volume, setVolume] = useState(50);
 
-    useEffect(() => {
-
-        const audio = document.getElementById('mini_podcast_audio');
-        audio.volume = volume / 100
-
-        const value = document.getElementById('volume');
-        value.oninput = () => setVolume(value.value)
-        value.onchange = () => setVolume(value.value)
-
-        if(audio.volume > 0){
-            setIsNotMuted(true);
-            audio.muted = false;
-        }
-        if(audio.volume === 0){
-            setIsNotMuted(false);
-        }
-    }, [volume]);
-
-    console.log(isNotMuted)
-
     function handleIsPaused(){
+        //Trocar o estado de pausa
         setIsPaused(!isPaused);
-
+        //Iniciar áudio
         if(isPaused){
             function playAudio(){
                 const audio = document.getElementById('mini_podcast_audio');
@@ -52,6 +33,7 @@ export default function MiniPodcast(){
 
             playAudio();
         }
+        //Pausar áudio
         if(isPaused === false){
             function pauseAudio(){
                 const audio = document.getElementById('mini_podcast_audio');
@@ -62,15 +44,35 @@ export default function MiniPodcast(){
         }
     }
 
-    function handleMuted(){
-        
-        setIsNotMuted(!isNotMuted)
+    useEffect(() => {
+        //Puxando áudio do minipodcast
+        const audio = document.getElementById('mini_podcast_audio');
+        audio.volume = volume / 100 //Puxando valor(volume) de um estado criado para setar os valores 
+        //Puxando valor do Input Range pela sua ID
+        const value = document.getElementById('volume');
+        //Atualizando valor do volume sempre que o Input for modificado
+        value.oninput = () => setVolume(value.value)
+        value.onchange = () => setVolume(value.value)
+        //Lógica para mudar estado do mute quando o volume for modificado para também alterar os ícones
+        if(audio.volume > 0){
+            setIsNotMuted(true);
+            audio.muted = false;
+        }
+        if(audio.volume === 0){
+            setIsNotMuted(false);
+        }
+    }, [volume]);
 
+    function handleMuted(){
+        //Trocar o Estado de Mudo
+        setIsNotMuted(!isNotMuted)
+        //Lógica para Mutar e Desmutar
         const audio = document.getElementById('mini_podcast_audio');
         audio.muted = !audio.muted;
         
+        //Lógica para barra de volume mudar quando mutar o áudio
         const value = document.getElementById('volume');
-
+        
         if(!isNotMuted){
             value.value = volume;
         }
@@ -78,7 +80,7 @@ export default function MiniPodcast(){
             value.value = 0;
         }
     }
-
+    
     return(
         <MiniPodcastView>
             <MiniPodcastTitle>
