@@ -31,7 +31,6 @@ export default function MiniPodcast(){
             function playAudio(){
                 const audio = document.getElementById('mini_podcast_audio');
                 audio.play();
-                audio.currentTime = 60
             }
 
             playAudio();
@@ -47,16 +46,38 @@ export default function MiniPodcast(){
         }
     }
 
+    function secondsToMinutes(time){
+        const hours = Math.floor(time/3600);
+        const minutes = Math.floor(time/60);
+        const seconds = Math.floor(time%60);
+
+        return `${("0" + hours).slice(-1)}:${("0" + minutes).slice(-2)}:${("0" + seconds).slice(-2)}`;
+    }
+
     useEffect(()=>{
         const audio = document.getElementById('mini_podcast_audio');
         audio.currentTime = seek;
 
         const seekbar = document.getElementById('seekbar');
+        
+        const currentDuration = document.getElementById('current_duration');
+        const totalDuration = document.getElementById('total_duration');
 
-        seekbar.oninput = () => setSeek(seekbar.value);
-        seekbar.onchange = () => setSeek(seekbar.value);
+        function timeUpdate(){
+            currentDuration.innerText = secondsToMinutes(audio.currentTime);
+            seekbar.value = audio.currentTime;
+        }
+        
+        audio.onloadeddata = () => {
+            seekbar.oninput = () => setSeek(seekbar.value);
+            seekbar.onchange = () => setSeek(seekbar.value);
+    
+            seekbar.max = audio.duration;
+            totalDuration.innerText = secondsToMinutes(audio.duration);
 
-
+            audio.ontimeupdate = () => timeUpdate();
+        }
+        
     }, [seek]);
 
     useEffect(() => {
@@ -118,11 +139,11 @@ export default function MiniPodcast(){
                     </MiniPodcastAudio>
                 </MiniPodcastFunctions>
                 <MiniPodcastTime>
-                    <MiniTime>00:00</MiniTime>
+                    <MiniTime id='current_duration'>0:00:00</MiniTime>
                         <MiniTimer>
-                            <input type="range" min="0" max="100" id="seekbar" step="1"/>
+                            <input type="range" min="0" max="0" id="seekbar" step="1"/>
                         </MiniTimer>
-                    <MiniTime>00:00</MiniTime>
+                    <MiniTime id='total_duration'>0:00:00</MiniTime>
                 </MiniPodcastTime>
             </MiniPodcastImage>
         </MiniPodcastView>
