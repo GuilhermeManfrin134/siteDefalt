@@ -67,6 +67,11 @@ export default function MiniPodcast(){
             currentDuration.innerText = secondsToMinutes(audio.currentTime);
             seekbar.value = audio.currentTime;
         }
+        function restart(){
+            setSeek(0);
+            audio.pause();
+            setIsPaused(isPaused === true);
+        }
         
         audio.onloadeddata = () => {
             seekbar.oninput = () => setSeek(seekbar.value);
@@ -76,6 +81,7 @@ export default function MiniPodcast(){
             totalDuration.innerText = secondsToMinutes(audio.duration);
 
             audio.ontimeupdate = () => timeUpdate();
+            audio.onended = () => restart();
         }
         
     }, [seek]);
