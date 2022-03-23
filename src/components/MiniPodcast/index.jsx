@@ -137,7 +137,7 @@ export default function MiniPodcast(){
                     </MiniPodcastPlayer>
                     <MiniPodcastAudio>
                         <MiniVolume>
-                            <SliderVol defaultvalue={volume} min="0" max="100" id="volume" step="1"/>
+                            <SliderVol defaultvalue={volume} color={isNotMuted ? 'var(--primaryColor)' : '#FFF'} min="0" max="100" id="volume" step="1"/>
                         </MiniVolume>
                         <MiniPodcastVolume onClick={handleMuted}>
                             {isNotMuted ? <FaVolumeUp/> : <FaVolumeMute />}

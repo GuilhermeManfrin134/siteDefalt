@@ -87,8 +87,8 @@ export const SliderVol = styled.input.attrs({ type: 'range' })`
     border-radius: 4px;
     background: ${(props) =>
         `linear-gradient(to right, 
-        var(--primaryColor) 0%,
-        var(--primaryColor) ${props.defaultvalue}%, 
+        ${props.color} 0%,
+        ${props.color} ${props.defaultvalue}%, 
         #fff ${props.defaultvalue}%, 
         #fff 100%);`
     };
