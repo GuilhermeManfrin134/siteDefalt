@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { 
     MiniPodcastView, MiniPodcastImage, MiniPodcastFunctions, 
     MiniPodcastTitle, MiniPodcastAudio, MiniPodcastPlayer,
-    MiniPodcastTime, MiniTime, MiniTimer, MiniPodcastVolume, MiniVolume
+    MiniPodcastTime, MiniTime, MiniTimer, MiniPodcastVolume, 
+    MiniVolume, SliderVol, SliderSeek
     } from './styles';
 
 //Importando ICONES
@@ -19,9 +20,7 @@ export default function MiniPodcast(){
     const [isPaused, setIsPaused] = useState(true);
     const [isNotMuted, setIsNotMuted] = useState(true);
     const [volume, setVolume] = useState(50);
-    const [seek, setSeek] = useState(0);
-
-    
+    const [seek, setSeek] = useState(0);  
 
     function handleIsPaused(){
         //Trocar o estado de pausa
@@ -103,6 +102,7 @@ export default function MiniPodcast(){
         if(audio.volume === 0){
             setIsNotMuted(false);
         }
+
     }, [volume]);
 
     function handleMuted(){
@@ -137,7 +137,7 @@ export default function MiniPodcast(){
                     </MiniPodcastPlayer>
                     <MiniPodcastAudio>
                         <MiniVolume>
-                            <input type="range" min="0" max="100" id="volume" step="1"/>
+                            <SliderVol defaultvalue={volume} min="0" max="100" id="volume" step="1"/>
                         </MiniVolume>
                         <MiniPodcastVolume onClick={handleMuted}>
                             {isNotMuted ? <FaVolumeUp/> : <FaVolumeMute />}
@@ -147,7 +147,7 @@ export default function MiniPodcast(){
                 <MiniPodcastTime>
                     <MiniTime id='current_duration'>0:00:00</MiniTime>
                         <MiniTimer>
-                            <input type="range" min="0" max="0" id="seekbar" step="1"/>
+                            <SliderSeek defaultValue={seek} min="0" max="100" id="seekbar" step="1"/>
                         </MiniTimer>
                     <MiniTime id='total_duration'>0:00:00</MiniTime>
                 </MiniPodcastTime>

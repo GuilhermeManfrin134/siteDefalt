@@ -31,8 +31,10 @@ export const MiniPodcastFunctions = styled.div`
 export const MiniPodcastTitle = styled.div`
     max-height: 50px;
     background-color: var(--secondaryColor);
-    padding: 5px;
+    padding: 5px 15px 5px 15px;
     color: #FFF;
+    font-weight: bold;
+    box-sizing: border-box;
     text-align: justify;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -41,6 +43,7 @@ export const MiniPodcastTitle = styled.div`
     -webkit-line-clamp: 2; /* number of lines to show */
     line-clamp: 2; 
     -webkit-box-orient: vertical;
+    border-radius: 10px 10px 0 0;
 `;
 
 export const MiniPodcastPlayer = styled.div`
@@ -76,27 +79,33 @@ export const MiniVolume = styled.div`
     align-items: center;
     justify-content: center;
     width: 80%;
+`;
 
-    input[type="range"]{
-        width: 100%;
-        height: 2px;
-    }
+export const SliderVol = styled.input.attrs({ type: 'range' })`
+    width: 100%;
+    height: 10px;
+    border-radius: 4px;
+    background: ${(props) =>
+        `linear-gradient(to right, 
+        var(--primaryColor) 0%,
+        var(--primaryColor) ${props.defaultvalue}%, 
+        #fff ${props.defaultvalue}%, 
+        #fff 100%);`
+    };
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 
-    input[type="range"]::-webkit-slider-thumb {
+    ::-webkit-slider-thumb {
         -webkit-appearance: none;
         border: none;
         width: 10px;
         height: 10px;
-        border-radius: 50%;
-        background: var(--primaryColor);
+        background: transparent;
     }
-
     input[type="range"]::-moz-range-thumb{
         -webkit-appearance: none;
         border: none;
         width: 10px;
         height: 10px;
-        border-radius: 50%;
         background: var(--primaryColor);
     }
     input[type="range"]::-ms-thumb{
@@ -104,7 +113,6 @@ export const MiniVolume = styled.div`
         border: none;
         width: 10px;
         height: 10px;
-        border-radius: 50%;
         background: var(--primaryColor);
     }
 `;
@@ -138,18 +146,24 @@ export const MiniPodcastTime = styled.div`
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--primaryColor);
+    border-radius: 0 0 10px 10px;
 `;
 
 export const MiniTime = styled.div`
     padding: 0 10px;
-    font-size: 100%;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 12px;
     color: #FFF;
     font-weight: bold;
     width: 10%;
+    height: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: var(--secondaryColor);
 `;
 
 export const MiniTimer = styled.div`
@@ -157,33 +171,35 @@ export const MiniTimer = styled.div`
     align-items: center;
     justify-content: center;
     width: 80%;
+`;
 
-    input[type="range"]{
-        width: 100%;
-        height: 5px;
-    }
-    input[type="range"]::-webkit-slider-thumb {
+export const SliderSeek = styled.input.attrs({type: "range"})` 
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+
+    ::-webkit-slider-thumb {
         -webkit-appearance: none;
         border: none;
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background: var(--tertiaryColor);
+        background: var(--secondaryColor);
     }
-    input[type="range"]::-moz-range-thumb {
+    ::-moz-range-thumb {
         -webkit-appearance: none;
         border: none;
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background: var(--tertiaryColor);
+        background: var(--secondaryColor);
     }
-    input[type="range"]::-ms-thumb {
+    ::-ms-thumb {
         -webkit-appearance: none;
         border: none;
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background: var(--tertiaryColor);
+        background: var(--secondaryColor);
     }
 `;
