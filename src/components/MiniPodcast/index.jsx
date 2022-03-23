@@ -83,7 +83,7 @@ export default function MiniPodcast(){
             audio.onended = () => restart();
         }
         
-    }, [seek]);
+    }, [seek, isPaused]);
 
     useEffect(() => {
         //Puxando áudio do minipodcast
