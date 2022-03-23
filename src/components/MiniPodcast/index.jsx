@@ -19,6 +19,9 @@ export default function MiniPodcast(){
     const [isPaused, setIsPaused] = useState(true);
     const [isNotMuted, setIsNotMuted] = useState(true);
     const [volume, setVolume] = useState(50);
+    const [seek, setSeek] = useState(0);
+
+    
 
     function handleIsPaused(){
         //Trocar o estado de pausa
@@ -43,6 +46,18 @@ export default function MiniPodcast(){
             pauseAudio();
         }
     }
+
+    useEffect(()=>{
+        const audio = document.getElementById('mini_podcast_audio');
+        audio.currentTime = seek;
+
+        const seekbar = document.getElementById('seekbar');
+
+        seekbar.oninput = () => setSeek(seekbar.value);
+        seekbar.onchange = () => setSeek(seekbar.value);
+
+
+    }, [seek]);
 
     useEffect(() => {
         //Puxando áudio do minipodcast
