@@ -21,6 +21,10 @@ export const Icon = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 430px){
+        width: 80px;
+    }
+
     img{
         width: 100%;
     }
@@ -31,6 +35,10 @@ export const SocialMedias = styled.div`
     height: 80px;
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: 430px){
+        width: 150px;
+    }
 
     a{
         color: #FFF;
