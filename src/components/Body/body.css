@@ -6,6 +6,7 @@
     grid-template-areas: "banner destaques" "main destaques";
     justify-content: center;
     margin-top: 30px;
+
 }
 
 .body-banner{
@@ -25,4 +26,15 @@
 .body-destaques{
     grid-area: destaques;
     width: 100%;
+}
+
+@media screen and (max-width: 980px){
+    .body-page{
+        display: block;
+        margin: 30px auto;
+        width: 85%;
+    }
+    .body-destaques{
+        display: none;
+    }
 }
