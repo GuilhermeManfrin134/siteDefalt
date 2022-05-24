@@ -12,12 +12,12 @@ export default function Body(){
             <section className='body-banner'>
                 <Carousel/>
             </section>
-            <main className='body-main'>
-                <Main/>
-            </main>
             <aside className='body-destaques'>
                 <Destaques/>  
             </aside>
+            <main className='body-main'>
+                <Main/>
+            </main>
         </div>
     )
 }

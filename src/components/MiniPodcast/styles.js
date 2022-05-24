@@ -4,6 +4,10 @@ export const MiniPodcastView = styled.div`
     width: 100%;
     height: auto;
     max-height: 250px;
+
+    @media screen and (max-width: 980px){
+        display: none;
+    }
 `;
 
 export const MiniPodcastImage = styled.div`
