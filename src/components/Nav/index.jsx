@@ -70,6 +70,12 @@ export default function Nav(){
             </NavigatorIconMobile>
             <NavigatorMobile ml={navActive ? '-200px' : '0px'}>
                 <NavPrincipalMobile>
+                    <NavSearch>
+                        <Search>
+                            <ImSearch size={15}/>
+                            <input type='text' placeholder="Ex: Anime"/>
+                        </Search>
+                    </NavSearch>
                     <NavItensMobile>
                     <NavItem>
                             <Link to='/'>

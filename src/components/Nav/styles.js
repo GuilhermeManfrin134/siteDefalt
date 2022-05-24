@@ -65,6 +65,17 @@ export const NavSearch = styled.ul`
         padding: 5px;
         margin-left: 5px;
     }
+
+    @media screen and (max-width: 799px){
+        width: 100%;
+        padding-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        input{
+            width: 150px;
+        }
+    }
 `;
 
 export const Search = styled.div`
