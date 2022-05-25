@@ -18,6 +18,10 @@ export const BodyPublications = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 400px){
+        flex-direction: column;
+    }
 `;
 
 export const TitlePublications = styled.h2`
@@ -38,6 +42,10 @@ export const BodyArticles = styled.article`
     align-items: center;
     text-align: justify;
     cursor: pointer;
+
+    @media screen and (max-width: 400px){
+        width: 100%;
+    }
 `;
 
 export const ImagePub = styled.div`
@@ -76,5 +84,9 @@ export const TitlePub = styled.div`
     :hover{
         color: #FFF;
         opacity: 1;
+    }
+
+    @media screen and (max-width: 300px){
+        font-size: 12px;
     }
 `;
