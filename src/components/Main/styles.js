@@ -59,6 +59,7 @@ export const TitlePub = styled.div`
     background-color: var(--quaternaryColor);
     opacity: .8;
     font-weight: bold;
+    line-height: 19px;
 
     max-height: 50px;
     overflow: hidden;
