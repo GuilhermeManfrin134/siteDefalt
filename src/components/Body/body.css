@@ -16,8 +16,9 @@
     align-items: center;
     height: auto;
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
 }
+
 .body-main{
     grid-area: main;
     width: 100%;

@@ -33,7 +33,6 @@ export const CarouselBanner = styled.div`
 export const ContentBanner = styled.div`
     width: 100%;
     overflow: hidden;
-
 `;
 
 export const ImageBanner = styled.div`
@@ -62,6 +61,10 @@ export const ImageBanner = styled.div`
 	    -webkit-transform: scale(0.9);
 	    transform: scale(0.9);
     }
+
+    @media screen and (max-width: 500px){
+        height: 200px;
+    }
 `;
 
 export const TitleBanner = styled.div`
@@ -75,7 +78,7 @@ export const TitleBanner = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 0 0;
 
     p{
         overflow: hidden;
@@ -90,6 +93,14 @@ export const TitleBanner = styled.div`
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
+
+    @media screen and (max-width: 500px){
+        max-height: 100px;
+
+        p{
+            font-size: 14px;
+        }
+    }
 `;
 
 export const Chevron = styled.div`
@@ -98,6 +109,10 @@ export const Chevron = styled.div`
     align-items: center;
 
     height: auto;
+
+    @media screen and (max-width: 600px){
+        display: none;
+    }
 `;
 
 export const ButtonChevron = styled.button`
