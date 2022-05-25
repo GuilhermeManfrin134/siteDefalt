@@ -15,7 +15,7 @@ export default function Footer(){
                         </Link>
                     </Icon>
                     <Text>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, officia deserunt harum, recusandae quam quod praesentium, beatae doloremque perspiciatis dolor sunt? Id illum, consectetur cumque cupiditate molestias dignissimos ducimus omnis.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, officia deserunt harum, recusandae quam quod praesentium, beatae doloremque perspiciatis dolor sunt? Id illum.
                     </Text>
                 </Left>
                 <Right>

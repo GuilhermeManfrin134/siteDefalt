@@ -7,6 +7,10 @@ export const Foot = styled.footer`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 850px){
+        height: auto;
+    }
 `;
 
 export const Up = styled.div`
@@ -16,13 +20,33 @@ export const Up = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 60px;
+
+    @media screen and (max-width: 850px){
+        height: auto;
+        padding: 25px 15px 25px;
+    }
+
+    @media screen and (max-width: 550px){
+        flex-direction: column;
+    }
 `;
 
 export const Left = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%; 
+    width: 65%;
+
+    @media screen and (max-width: 850px){
+        flex-direction: column;
+        align-items: baseline;
+        width: 80%;
+    }
+
+    @media screen and (max-width: 550px){
+        align-items: flex-end;
+        width: 100%;
+    }
 `;
 
 export const Icon = styled.div`
@@ -34,18 +58,48 @@ export const Icon = styled.div`
     img{
         width: 100%;
     }
+
+    @media screen and (max-width: 850px){
+        margin-bottom: 15px;
+    }
 `;
 
 export const Text = styled.div`
     width: 70%;
     text-align: justify;
     color: #FFF;
+
+    @media screen and (max-width: 850px){
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 550px){
+        width: 90%;
+    }
 `;
 
 export const Right = styled.div`
     display: flex;
     align-items: center;
     width: 20%;
+    color: #FFF;
+    
+    @media screen and (max-width: 850px){
+        font-size: 20px;
+        align-items: baseline;
+
+        h3{
+            margin-top: 0;
+        }
+    }
+    @media screen and (max-width: 550px){
+        width: 100%;
+
+        h3{
+            margin-top: 40px;
+            color: var(--quaternaryColor)
+        }
+    }
 `;
 
 export const About = styled.div`
@@ -53,10 +107,6 @@ export const About = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
-    h3{
-        color: #FFF ;
-    }
 `;
 
 export const Options = styled.div`
@@ -83,6 +133,7 @@ export const Back = styled.div`
     flex-direction: column;
     background-color: var(--primaryColor);
     color: #FFF;
+    text-align: center;
 
     p{
         display: flex;
