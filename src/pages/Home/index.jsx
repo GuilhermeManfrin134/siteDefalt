@@ -2,7 +2,7 @@
 //Importando COMPONENTES
 import Body from "../../components/Body";
 
-export function Home(){
+export default function Home(){
     return(
         <Body />
     )
