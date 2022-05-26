@@ -55,13 +55,15 @@ export const ImageBanner = styled.div`
     -webkit-transform: scale(1);
     transform: scale(1);
 
-    :hover{
-        cursor: pointer;
-        -moz-transform: scale(0.9);
-	    -webkit-transform: scale(0.9);
-	    transform: scale(0.9);
+    
+    @media screen and (min-width: 500px){
+        :hover{
+            cursor: pointer;
+            -moz-transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+        }
     }
-
     @media screen and (max-width: 500px){
         height: 200px;
     }
